@@ -1,6 +1,6 @@
 # Launchpad Pro MK3 Web MIDI Prototype
 
-A single-page Web MIDI demo for the Novation Launchpad Pro MK3. It connects in Programmer Mode, lights pads, logs MIDI messages, and includes a few playful modes (Rainbow, Game of Life, Tic Tac Toe, Connect Four, and a 1‑player Connect Four).
+A single-page Web MIDI demo for the Novation Launchpad Pro MK3. It connects in Programmer Mode, lights pads, logs MIDI messages, and includes a few playful modes (Rainbow Diagonal, Game of Life, Tic Tac Toe, Connect Four, and a 1‑player Connect Four with a simple AI).
 
 ## Features
 - Connect to MIDI input/output devices and log incoming/outgoing messages.
@@ -43,6 +43,7 @@ Then visit `http://localhost:8000` in your browser.
 ## File Overview
 - `index.html` — All HTML/CSS/JS in a single file.
 - `README.md` — This document.
+- `LICENSE` — MIT license text.
 
 ## License
-MIT (add a LICENSE file if you want to formalize this).
+MIT. See `LICENSE`.
