@@ -76,12 +76,17 @@ Then visit `http://localhost:8000` in your browser.
 - Grid notes: `11`–`88` (row/col encoded as `row * 10 + col`).
 
 ## Development
-- Everything lives in a single file: `index.html`.
+- Source is split into small ES modules for clarity.
 - Use a local server if the browser blocks MIDI access for `file://` URLs.
 - Feel free to add new modes or color palettes; keep UI labels short and button text clear.
 
 ## File Overview
-- `index.html` — All HTML/CSS/JS in a single file.
+- `index.html` — UI markup and styles, loads `app.js`.
+- `app.js` — App bootstrap and event wiring.
+- `midi.js` — Web MIDI access, logging, and output helpers.
+- `ui.js` — DOM bindings and UI helpers.
+- `grid.js` — Note/row/col helpers for the 8x8 grid.
+- `modes/` — Mode implementations (Rainbow, Life, Tic Tac Toe, Connect Four).
 - `README.md` — This document.
 - `LICENSE` — MIT license text.
 
