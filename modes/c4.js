@@ -174,10 +174,6 @@ export const createC4Mode = ({ midi, ui, label, setUiActive }) => {
 
   const handlePress = (note) => {
     if (!running) return;
-    if (winTimer && !winPulsing) return;
-    if (dropping) return;
-    if (aiPending) return;
-    if (aiEnabled && turn === 2) return;
     if (winner) {
       winner = null;
       winLine = null;
@@ -199,6 +195,10 @@ export const createC4Mode = ({ midi, ui, label, setUiActive }) => {
       ui.log("Connect Four reset.");
       return;
     }
+    if (winTimer && !winPulsing) return;
+    if (dropping) return;
+    if (aiPending) return;
+    if (aiEnabled && turn === 2) return;
     const { col } = noteToRowCol(note);
     runDrop(col);
   };

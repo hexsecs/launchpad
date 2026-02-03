@@ -254,7 +254,6 @@ export const createTttMode = ({ midi, ui }) => {
 
   const handlePress = (note) => {
     if (!running) return;
-    if (winTimer && !winPulsing) return;
     if (winner) {
       winner = null;
       winLine = null;
@@ -270,6 +269,7 @@ export const createTttMode = ({ midi, ui }) => {
       ui.log("Tic Tac Toe reset.");
       return;
     }
+    if (winTimer && !winPulsing) return;
     const { row, col } = noteToRowCol(note);
     if (gridLines.includes(row) || gridLines.includes(col)) return;
     const cell = map.get(note);
