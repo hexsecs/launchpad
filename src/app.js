@@ -1,6 +1,6 @@
-import { createUi } from "./ui.js";
-import { createMidi } from "./midi.js";
-import { createModeManager } from "./modes.js";
+import { createUi } from "./ui/index.js";
+import { createMidi } from "./midi/index.js";
+import { createModeManager } from "./modes/index.js";
 import { createRainbowMode } from "./modes/rainbow.js";
 import { createLifeMode } from "./modes/life.js";
 import { createTttMode } from "./modes/ttt.js";
@@ -88,7 +88,10 @@ lightDemoBtn.addEventListener("click", () => {
 });
 
 clearBtn.addEventListener("click", () => {
+  const active = modeManager.getActive();
+  if (active) modeManager.stop(active);
   midi.clearGrid();
+  midi.clearOuterButtons();
   ui.log("Cleared grid.");
 });
 

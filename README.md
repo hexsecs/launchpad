@@ -18,7 +18,7 @@ A single-page Web MIDI demo for the Novation Launchpad Pro MK3. It connects in P
 No build step. Open the file directly in a supported browser:
 
 ```bash
-open index.html
+open public/index.html
 ```
 
 Or serve it from a local HTTP server if your browser blocks file access:
@@ -81,12 +81,12 @@ Then visit `http://localhost:8000` in your browser.
 - Feel free to add new modes or color palettes; keep UI labels short and button text clear.
 
 ## File Overview
-- `index.html` — UI markup and styles, loads `app.js`.
-- `app.js` — App bootstrap and event wiring.
-- `midi.js` — Web MIDI access, logging, and output helpers.
-- `ui.js` — DOM bindings and UI helpers.
-- `grid.js` — Note/row/col helpers for the 8x8 grid.
-- `modes/` — Mode implementations (Rainbow, Life, Tic Tac Toe, Connect Four).
+- `public/index.html` — UI markup and styles, loads `src/app.js`.
+- `src/app.js` — App bootstrap and event wiring.
+- `src/midi/index.js` — Web MIDI access, logging, and output helpers.
+- `src/ui/index.js` — DOM bindings and UI helpers.
+- `src/shared/grid.js` — Note/row/col helpers for the 8x8 grid.
+- `src/modes/` — Mode implementations (Rainbow, Life, Tic Tac Toe, Connect Four).
 - `README.md` — This document.
 - `LICENSE` — MIT license text.
 

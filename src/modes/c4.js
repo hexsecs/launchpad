@@ -1,4 +1,4 @@
-import { rowColToNote, noteToRowCol } from "../grid.js";
+import { rowColToNote, noteToRowCol } from "../shared/grid.js";
 
 export const createC4Mode = ({ midi, ui, label, setUiActive }) => {
   let running = false;
